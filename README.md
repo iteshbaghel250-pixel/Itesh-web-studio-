@@ -32,7 +32,7 @@ index.html <!DOCTYPE html>
     </p>
     <div class="buttons">
       <a href="#projects" class="btn">View My Work</a>
-      <a href="https://wa.me/919999999999" class="btn whatsapp">
+      <a href="https://wa.me/9039853662" class="btn whatsapp">
         WhatsApp Me
       </a>
     </div>
@@ -81,7 +81,7 @@ index.html <!DOCTYPE html>
     Need a professional website for your business?
     Contact me today.
   </p>
-  <a href="https://wa.me/919999999999" class="btn whatsapp">
+  <a href="https://wa.me/9039853662" class="btn whatsapp">
     Chat on WhatsApp
   </a>
 </section>
