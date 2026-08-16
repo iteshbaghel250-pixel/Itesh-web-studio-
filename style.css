@@ -5,14 +5,14 @@
 }
 
 :root{
-    --bg:#050505;
-    --bg2:#09090b;
-    --card:#101014;
-    --text:#fff;
-    --muted:#8c8c96;
-    --line:rgba(255,255,255,.10);
-    --white:#fff;
-    --container:1220px;
+    --bg: #0f172a;
+    --bg2: #09093fb;
+    --card: #101014;
+    --text: #fff;
+    --muted: #8c8c96;
+    --line: rgba(255,255,255,.10);
+    --white: #fff;
+    --container: 1220px;
 }
 
 html{
