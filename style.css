@@ -20,11 +20,14 @@ html{
 }
 
 body{
-    background:
-        radial-gradient(
-            circle at 80% 0%,
-            rgba(255,255,255,.07),
-            transparent 25%
+    background: #0f172a;
+        color: var(--text);
+           font:family: inter, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+    
+    transparent 25%
         ),
         var(--bg);
     color:var(--text);
