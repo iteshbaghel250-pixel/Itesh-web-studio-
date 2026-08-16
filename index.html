@@ -1,513 +1,1059 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Itesh Web Studio — Premium Digital Experiences</title>
+<title>Itesh Web Studio — Digital Experiences That Scale</title>
 
 <meta name="description"
-content="Itesh Web Studio creates premium websites for schools, hospitals, businesses, e-commerce brands, restaurants, gyms and panchayati organizations.">
+content="Itesh Web Studio creates premium websites, web applications and digital experiences for ambitious businesses and organizations.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+    <div class="loader-logo">IW</div>
+    <div class="loader-bar"></div>
+    <p>ITESH WEB STUDIO</p>
+</div>
 
-  <a href="#home" class="logo">
-    Itesh<span>.</span>
-  </a>
 
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<!-- HEADER -->
+<header class="header" id="header">
 
-  <a
-    class="nav-cta"
-    href="https://wa.me/919039853662?text=Hello%20Itesh%20Web%20Studio%2C%20I%20want%20a%20website."
-    target="_blank">
-    Let's Talk
-  </a>
+<div class="container nav">
 
-</nav>
+    <a href="#home" class="logo">
+        <span class="logo-mark">IW</span>
+        <span>
+            <b>Itesh</b>
+            <small>Web Studio</small>
+        </span>
+    </a>
+
+    <nav id="navMenu">
+
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <a href="#contact" class="nav-cta">
+        Start Project →
+    </a>
+
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
+
+</div>
+
+</header>
 
 
 <!-- HERO -->
 <section class="hero" id="home">
 
-  <div class="hero-content reveal">
+<div class="hero-orb orb-one"></div>
+<div class="hero-orb orb-two"></div>
 
-    <div class="eyebrow">
-      Itesh Web Studio
+<div class="container hero-grid">
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            <span class="status-dot"></span>
+            PREMIUM DIGITAL STUDIO
+        </div>
+
+        <h1>
+            Digital Experiences
+            <span>Built To Scale.</span>
+        </h1>
+
+        <p class="hero-description">
+            We design and develop premium websites, web applications
+            and digital experiences that help ambitious businesses
+            build trust, generate leads and grow online.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#work" class="btn btn-white">
+                Explore Our Work →
+            </a>
+
+            <a href="#showreel" class="btn btn-glass">
+                ▶ Watch Showreel
+            </a>
+
+        </div>
+
+        <div class="hero-numbers">
+
+            <div>
+                <strong class="counter" data-target="50">0</strong>
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong class="counter" data-target="12">0</strong>
+                <span>Industries</span>
+            </div>
+
+            <div>
+                <strong class="counter" data-target="100">0</strong>
+                <span>Responsive</span>
+            </div>
+
+        </div>
+
     </div>
 
-    <h1>
-      Digital<br>
-      experiences<br>
-      that <span>convert.</span>
-    </h1>
 
-    <p class="hero-text">
-      I create premium, modern and responsive websites
-      for businesses that want to build trust, attract
-      customers and grow their online presence.
-    </p>
+    <!-- HERO VIDEO -->
+    <div class="hero-visual reveal">
 
-    <div class="hero-buttons">
+        <div class="browser">
 
-      <a href="#work" class="btn btn-primary">
-        Explore My Work →
-      </a>
+            <div class="browser-top">
 
-      <a
-        href="https://wa.me/919039853662?text=Hello%20Itesh%20Web%20Studio%2C%20I%20want%20a%20website."
-        target="_blank"
-        class="btn btn-outline">
-        Start a Project
-      </a>
+                <div class="browser-dots">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+                <span>premium-digital-experience.com</span>
+
+            </div>
+
+            <div class="hero-video">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    poster="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80">
+
+                    <source src="videos/showreel.mp4" type="video/mp4">
+
+                </video>
+
+                <div class="video-label">
+                    <span>LIVE EXPERIENCE</span>
+                    <b>Premium Digital Platform</b>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- MARQUEE -->
-<div class="marquee">
+<!-- TRUST -->
+<section class="trust">
 
-  <div class="marquee-track">
+<div class="container trust-row">
 
-    WEB DESIGN <span>✦</span>
-    DEVELOPMENT <span>✦</span>
-    BRANDING <span>✦</span>
-    BUSINESS WEBSITES <span>✦</span>
-    E-COMMERCE <span>✦</span>
-    SEO OPTIMIZATION ‹span>✦</span>
-    UI/UX DESIGN ‹span>✦</span›
-    WEB DESIGN <span>✦</span>
-    DEVELOPMENT <span>✦</span>
-    SPEED OPTIMIZATION ‹span>✦</span>
-    BRANDING <span>✦</span>
+    <span>DESIGNED FOR</span>
 
-  </div>
+    <b>🏫 Education</b>
+    <b>🏥 Healthcare</b>
+    <b>🏨 Hospitality</b>
+    <b>🛒 E-Commerce</b>
+    <b>🏢 Corporate</b>
+    <b>🏋️ Fitness</b>
 
 </div>
-
-
-<!-- ABOUT -->
-<section id="about">
-
-  <div class="section-number">
-    01 — About
-  </div>
-
-  <h2 class="section-title reveal">
-    Websites built to make businesses look premium.
-  </h2>
-
-  <div class="about-grid">
-
-    <div class="about-text reveal">
-
-      <p>
-        I'm Itesh, the creator behind
-        <strong style="color:#fff;">Itesh Web Studio.</strong>
-      </p>
-
-      <p>
-        I design websites for businesses, organizations
-        and brands that need a professional digital presence.
-      </p>
-
-      <p>
-        My focus is clean design, mobile responsiveness,
-        fast performance and clear customer-focused experiences.
-      </p>
-
-      <p>
-        From local businesses to e-commerce brands,
-        every project is designed around the client's goals.
-      </p>
-
-    </div>
-
-    <div class="about-box reveal">
-
-      <h3>Studio Details</h3>
-
-      <ul class="about-list">
-
-        <li><strong>👑Founder & director:</strong> Itesh</li>
-        <li><strong>💎Studio:</strong> Itesh Web Studio (primium digital agency)</li>
-        <li><strong>📍Location:</strong> Jobat, Alirajpur(m.p.)</li>
-        <li><strong>🚀core Service:</strong> high-end Web Design & custom Development</li>
-        <li><strong>🎯 specialization:</strong>modern Business Websites & e-commerce solutions</li>
-<li><strong>🌟 experince:</strong>100% clint satisfiaction & premium quality</li>
-      </ul>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- SERVICES -->
-<section id="services">
+<section class="section" id="services">
 
-  <div class="section-number">
-    02 — Services
-  </div>
+<div class="container">
 
-  <h2 class="section-title reveal">
-    One studio. Multiple digital solutions.
-  </h2>
+    <div class="section-head reveal">
 
-  <div class="services">
+        <span class="section-label">CAPABILITIES</span>
 
-    <div class="service reveal">
-      <div class="service-number">01</div>
-      <h3>Business Websites</h3>
-      <p>
-        Professional websites that establish credibility
-        and help customers understand your business.
-      </p>
+        <h2>
+            Everything Your
+            <span>Digital Brand Needs.</span>
+        </h2>
+
+        <p>
+            From strategy and design to development and growth,
+            we create complete digital solutions.
+        </p>
+
     </div>
 
-    <div class="service reveal">
-      <div class="service-number">02</div>
-      <h3>E-Commerce</h3>
-      <p>
-        Modern online stores for products, catalogues,
-        enquiries and online selling.
-      </p>
+
+    <div class="services-grid">
+
+        <article class="service reveal">
+            <div class="service-number">01</div>
+            <div class="service-icon">◈</div>
+            <h3>Premium Websites</h3>
+            <p>
+                High-end business websites designed to create
+                credibility and generate enquiries.
+            </p>
+            <a href="#contact">Explore →</a>
+        </article>
+
+
+        <article class="service reveal">
+            <div class="service-number">02</div>
+            <div class="service-icon">▣</div>
+            <h3>Web Applications</h3>
+            <p>
+                Powerful web applications with dashboards,
+                authentication, databases and APIs.
+            </p>
+            <a href="#contact">Explore →</a>
+        </article>
+
+
+        <article class="service reveal">
+            <div class="service-number">03</div>
+            <div class="service-icon">◇</div>
+            <h3>E-Commerce</h3>
+            <p>
+                Conversion-focused online stores built around
+                products, customers and sales.
+            </p>
+            <a href="#contact">Explore →</a>
+        </article>
+
+
+        <article class="service reveal">
+            <div class="service-number">04</div>
+            <div class="service-icon">✦</div>
+            <h3>UI / UX Design</h3>
+            <p>
+                Clean interfaces and user journeys designed
+                around your audience and business goals.
+            </p>
+            <a href="#contact">Explore →</a>
+        </article>
+
+
+        <article class="service reveal">
+            <div class="service-number">05</div>
+            <div class="service-icon">⌁</div>
+            <h3>SEO & Performance</h3>
+            <p>
+                Fast, optimized and search-friendly websites
+                designed for better visibility.
+            </p>
+            <a href="#contact">Explore →</a>
+        </article>
+
+
+        <article class="service reveal">
+            <div class="service-number">06</div>
+            <div class="service-icon">⚙</div>
+            <h3>Custom Systems</h3>
+            <p>
+                Booking systems, dashboards, management platforms,
+                integrations and custom business tools.
+            </p>
+            <a href="#contact">Explore →</a>
+        </article>
+
     </div>
 
-    <div class="service reveal">
-      <div class="service-number">03</div>
-      <h3>Landing Pages</h3>
-      <p>
-        Focused pages designed around enquiries,
-        leads and conversions.
-      </p>
-    </div>
-
-    <div class="service reveal">
-      <div class="service-number">04</div>
-      <h3>Website Setup</h3>
-      <p>
-        Domain, hosting, SSL and website deployment
-        assistance.
-      </p>
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- PROJECTS -->
-<section id="work">
+<!-- SHOWREEL -->
+<section class="section showreel-section" id="showreel">
 
-  <div class="section-number">
-    03 — Selected Work
-  </div>
+<div class="container">
 
-  <h2 class="section-title reveal">
-    Explore the kind of websites I can build.
-  </h2>
+    <div class="section-head center reveal">
 
-  <div class="projects">
+        <span class="section-label">OUR SHOWREEL</span>
 
-    <article class="project reveal" onclick="openProject('school')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=85"
-        alt="School Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">Education</div>
-        <h3>School</h3>
-        <p>Modern school website experience.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
+        <h2>
+            Don't Just See It.
+            <span>Experience It.</span>
+        </h2>
 
-    <article class="project reveal" onclick="openProject('hospital')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1400&q=85"
-        alt="Hospital Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">Healthcare</div>
-        <h3>Hospital</h3>
-        <p>Clean and professional healthcare website.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
+        <p>
+            A glimpse into the digital experiences we create.
+        </p>
 
-    <article class="project reveal" onclick="openProject('business')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
-        alt="Business Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">Corporate</div>
-        <h3>Business</h3>
-        <p>Premium corporate business presence.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
+    </div>
 
-    <article class="project reveal" onclick="openProject('ecommerce')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=85"
-        alt="E-Commerce Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">E-Commerce</div>
-        <h3>Online Store</h3>
-        <p>Product-focused shopping experience.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
 
-    <article class="project reveal" onclick="openProject('restaurant')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
-        alt="Restaurant Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">Hospitality</div>
-        <h3>Restaurant</h3>
-        <p>Premium restaurant digital experience.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
+    <div class="showreel reveal">
 
-    <article class="project reveal" onclick="openProject('gym')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85"
-        alt="Gym Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">Fitness</div>
-        <h3>Gym</h3>
-        <p>High-energy fitness website concept.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
+        <video
+            id="mainVideo"
+            controls
+            playsinline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80">
 
-    <article class="project reveal" onclick="openProject('panchayati')">
-      <img
-        class="project-image"
-        src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=85"
-        alt="Panchayati Website">
-      <div class="project-overlay"></div>
-      <div class="project-content">
-        <div class="project-tag">Public Service</div>
-        <h3>Panchayati</h3>
-        <p>Information-focused local government concept.</p>
-        <div class="click-text">Click to explore →</div>
-      </div>
-    </article>
+            <source src="videos/showreel.mp4" type="video/mp4">
 
-  </div>
+        </video>
+
+        <div class="showreel-overlay" id="videoOverlay">
+
+            <button id="playShowreel">
+                ▶
+            </button>
+
+            <span>WATCH 60 SEC SHOWREEL</span>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
 
-<!-- VIDEO -->
-<section class="video-section">
+<!-- WORK -->
+<section class="section" id="work">
 
-  <div class="section-number">
-    04 — Studio Preview
-  </div>
+<div class="container">
 
-  <h2 class="section-title reveal">
-    See the design in motion.
-  </h2>
+    <div class="section-head reveal">
 
-  <div class="video-wrap reveal">
+        <span class="section-label">SELECTED WORK</span>
 
-    <div class="video-label">
-      ITESH WEB STUDIO
+        <h2>
+            Built For
+            <span>Real-World Industries.</span>
+        </h2>
+
     </div>
 
-    <video
-      controls
-      muted
-      loop
-      poster="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85">
 
-      <source src="studio-video.mp4" type="video/mp4">
+    <div class="projects">
 
-      Your browser does not support video playback.
 
-    </video>
+        <!-- SCHOOL -->
+        <article class="project project-big reveal">
 
-  </div>
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=85"
+                    alt="School website">
+
+                <div class="project-video-icon">▶</div>
+
+            </div>
+
+            <div class="project-content">
+
+                <span>EDUCATION</span>
+
+                <h3>Premium School Platform</h3>
+
+                <p>
+                    A complete digital platform for modern schools
+                    with admissions, academics, notices, gallery
+                    and events.
+                </p>
+
+                <div class="project-tags">
+                    <b>Admissions</b>
+                    <b>Gallery</b>
+                    <b>Notice Board</b>
+                    <b>Events</b>
+                </div>
+
+                <a href="#contact">View Case Study →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- HOSPITAL -->
+        <article class="project reveal">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85"
+                    alt="Hospital website">
+
+            </div>
+
+            <div class="project-content">
+
+                <span>HEALTHCARE</span>
+
+                <h3>Healthcare Experience</h3>
+
+                <p>
+                    Doctors, departments, appointments and
+                    healthcare services in one modern platform.
+                </p>
+
+                <a href="#contact">View Project →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- HOTEL -->
+        <article class="project reveal">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"
+                    alt="Hotel website">
+
+            </div>
+
+            <div class="project-content">
+
+                <span>HOSPITALITY</span>
+
+                <h3>Luxury Hotel Experience</h3>
+
+                <p>
+                    Rooms, facilities, gallery and booking enquiry
+                    designed for premium hospitality brands.
+                </p>
+
+                <a href="#contact">View Project →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- RESTAURANT -->
+        <article class="project reveal">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+                    alt="Restaurant website">
+
+            </div>
+
+            <div class="project-content">
+
+                <span>RESTAURANT</span>
+
+                <h3>Restaurant Digital Experience</h3>
+
+                <p>
+                    Menu, food gallery, location, enquiries and
+                    online ordering experience.
+                </p>
+
+                <a href="#contact">View Project →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- GYM -->
+        <article class="project reveal">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85"
+                    alt="Gym website">
+
+            </div>
+
+            <div class="project-content">
+
+                <span>FITNESS</span>
+
+                <h3>Elite Fitness Platform</h3>
+
+                <p>
+                    Membership plans, trainers, programs and
+                    enquiry system.
+                </p>
+
+                <a href="#contact">View Project →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ECOMMERCE -->
+        <article class="project project-wide reveal">
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=85"
+                    alt="E-commerce website">
+
+            </div>
+
+            <div class="project-content">
+
+                <span>E-COMMERCE</span>
+
+                <h3>Modern Online Store</h3>
+
+                <p>
+                    Product discovery, shopping experience,
+                    checkout and customer journey designed
+                    for online growth.
+                </p>
+
+                <a href="#contact">View Case Study →</a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- DEMO VIDEOS -->
+<section class="section demos-section">
+
+<div class="container">
+
+    <div class="section-head reveal">
+
+        <span class="section-label">LIVE DEMONSTRATIONS</span>
+
+        <h2>
+            See Our Websites
+            <span>In Action.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="demo-grid">
+
+
+        <div class="demo-card reveal">
+
+            <video controls playsinline preload="metadata">
+                <source src="videos/school.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <span>01 / EDUCATION</span>
+                <h3>School Website</h3>
+            </div>
+
+        </div>
+
+
+        <div class="demo-card reveal">
+
+            <video controls playsinline preload="metadata">
+                <source src="videos/hospital.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <span>02 / HEALTHCARE</span>
+                <h3>Hospital Website</h3>
+            </div>
+
+        </div>
+
+
+        <div class="demo-card reveal">
+
+            <video controls playsinline preload="metadata">
+                <source src="videos/hotel.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <span>03 / HOSPITALITY</span>
+                <h3>Hotel Website</h3>
+            </div>
+
+        </div>
+
+
+        <div class="demo-card reveal">
+
+            <video controls playsinline preload="metadata">
+                <source src="videos/restaurant.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <span>04 / RESTAURANT</span>
+                <h3>Restaurant Website</h3>
+            </div>
+
+        </div>
+
+
+        <div class="demo-card reveal">
+
+            <video controls playsinline preload="metadata">
+                <source src="videos/gym.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <span>05 / FITNESS</span>
+                <h3>Gym Website</h3>
+            </div>
+
+        </div>
+
+
+        <div class="demo-card reveal">
+
+            <video controls playsinline preload="metadata">
+                <source src="videos/ecommerce.mp4" type="video/mp4">
+            </video>
+
+            <div>
+                <span>06 / E-COMMERCE</span>
+                <h3>Online Store</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
 
 <!-- PROCESS -->
-<section>
+<section class="section" id="process">
 
-  <div class="section-number">
-    05 — Process
-  </div>
+<div class="container">
 
-  <h2 class="section-title reveal">
-    From idea to launch.
-  </h2>
+    <div class="section-head reveal">
 
-  <div class="process">
+        <span class="section-label">HOW WE WORK</span>
 
-    <div class="process-item reveal">
-      <span>01</span>
-      <h3>Discover</h3>
-      <p>Understand your business, audience and requirements.</p>
+        <h2>
+            From Idea
+            <span>To Digital Reality.</span>
+        </h2>
+
     </div>
 
-    <div class="process-item reveal">
-      <span>02</span>
-      <h3>Design</h3>
-      <p>Create a premium visual direction and user experience.</p>
+
+    <div class="process">
+
+        <div class="process-step reveal">
+
+            <strong>01</strong>
+
+            <h3>Discovery</h3>
+
+            <p>
+                We understand your business, customers,
+                competitors and goals.
+            </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+            <strong>02</strong>
+
+            <h3>Strategy</h3>
+
+            <p>
+                We plan the structure, user journey,
+                features and technology.
+            </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+            <strong>03</strong>
+
+            <h3>Design</h3>
+
+            <p>
+                We create a premium visual system and
+                conversion-focused interface.
+            </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+            <strong>04</strong>
+
+            <h3>Development</h3>
+
+            <p>
+                We transform the approved design into
+                a fast responsive digital product.
+            </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+            <strong>05</strong>
+
+            <h3>Testing</h3>
+
+            <p>
+                Devices, forms, links, performance and
+                functionality are thoroughly tested.
+            </p>
+
+        </div>
+
+
+        <div class="process-step reveal">
+
+            <strong>06</strong>
+
+            <h3>Launch</h3>
+
+            <p>
+                We deploy your project and help you
+                move forward with confidence.
+            </p>
+
+        </div>
+
     </div>
 
-    <div class="process-item reveal">
-      <span>03</span>
-      <h3>Develop</h3>
-      <p>Build a responsive and functional website.</p>
+</div>
+
+</section>
+
+
+<!-- TECH -->
+<section class="tech-section">
+
+<div class="container">
+
+    <div class="tech-head reveal">
+
+        <span class="section-label">TECHNOLOGY</span>
+
+        <h2>Built With Modern Technology.</h2>
+
     </div>
 
-    <div class="process-item reveal">
-      <span>04</span>
-      <h3>Launch</h3>
-      <p>Test, publish and help your business go online.</p>
+
+    <div class="tech-grid">
+
+        <div class="tech">HTML5</div>
+        <div class="tech">CSS3</div>
+        <div class="tech">JavaScript</div>
+        <div class="tech">React</div>
+        <div class="tech">Node.js</div>
+        <div class="tech">PHP</div>
+        <div class="tech">MySQL</div>
+        <div class="tech">REST APIs</div>
+        <div class="tech">Git</div>
+        <div class="tech">SEO</div>
+
     </div>
 
-  </div>
+</div>
 
 </section>
 
 
 <!-- PRICING -->
-<section id="pricing">
+<section class="section pricing-section" id="pricing">
 
-  <div class="section-number">
-    06 — Packages
-  </div>
+<div class="container">
 
-  <h2 class="section-title reveal">
-    Professional websites for different needs.
-  </h2>
+    <div class="section-head center reveal">
 
-  <div class="pricing">
+        <span class="section-label">INVESTMENT</span>
 
-    <div class="price-card reveal">
+        <h2>
+            Choose Your
+            <span>Digital Level.</span>
+        </h2>
 
-      <h3>Starter</h3>
-
-      <div class="price">
-        ₹5,000
-        <small>/ project</small>
-      </div>
-
-      <ul class="features">
-        <li>Business Home Page</li>
-        <li>About & Services</li>
-        <li>Gallery</li>
-        <li>Contact Section</li>
-        <li>WhatsApp Button</li>
-        <li>Mobile Responsive</li>
-      </ul>
-
-      <a
-        class="btn btn-outline"
-        href="https://wa.me/919039853662?text=Hello%20Itesh%2C%20I%20want%20the%20Starter%20website."
-        target="_blank">
-        Get Started
-      </a>
+        <p>
+            Every project is customized around your requirements.
+        </p>
 
     </div>
 
 
-    <div class="price-card featured reveal">
+    <div class="pricing">
 
-      <div class="popular">MOST POPULAR</div>
 
-      <h3>Professional</h3>
+        <!-- 7999 -->
+        <div class="price-card reveal">
 
-      <div class="price">
-        ₹9,999
-        <small>/ project</small>
-      </div>
+            <span>STARTER</span>
 
-      <ul class="features">
-        <li>Premium UI Design</li>
-        <li>Multiple Sections</li>
-        <li>Google Maps</li>
-        <li>Enquiry Form</li>
-        <li>Basic SEO</li>
-        <li>Domain & Hosting Setup</li>
-        <li>Support</li>
-      </ul>
+            <h3>Essential</h3>
 
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/919039853662?text=Hello%20Itesh%2C%20I%20want%20the%20Professional%20website."
-        target="_blank">
-        Choose Professional
-      </a>
+            <div class="price">₹7,999</div>
+
+            <p>For getting your business online.</p>
+
+            <ul>
+                <li>✓ Professional Home</li>
+                <li>✓ About & Services</li>
+                <li>✓ Contact Section</li>
+                <li>✓ WhatsApp Button</li>
+                <li>✓ Responsive Design</li>
+                <li>✓ Basic SEO</li>
+            </ul>
+
+            <a href="#contact">Start Project →</a>
+
+        </div>
+
+
+        <!-- 19999 -->
+        <div class="price-card reveal">
+
+            <span>BUSINESS</span>
+
+            <h3>Professional</h3>
+
+            <div class="price">₹19,999</div>
+
+            <p>For growing businesses.</p>
+
+            <ul>
+                <li>✓ Everything in Starter</li>
+                <li>✓ Gallery</li>
+                <li>✓ Testimonials</li>
+                <li>✓ Contact Form</li>
+                <li>✓ Google Maps</li>
+                <li>✓ Animations</li>
+                <li>✓ SEO Setup</li>
+            </ul>
+
+            <a href="#contact">Choose Package →</a>
+
+        </div>
+
+
+        <!-- 49999 -->
+        <div class="price-card featured reveal">
+
+            <div class="popular">POPULAR</div>
+
+            <span>PREMIUM</span>
+
+            <h3>Business Pro</h3>
+
+            <div class="price">₹49,999</div>
+
+            <p>For serious brands and businesses.</p>
+
+            <ul>
+                <li>✓ Custom UI/UX</li>
+                <li>✓ Multiple Pages</li>
+                <li>✓ Advanced Animations</li>
+                <li>✓ Video Integration</li>
+                <li>✓ Advanced SEO</li>
+                <li>✓ Speed Optimization</li>
+                <li>✓ Hosting Setup</li>
+            </ul>
+
+            <a href="#contact">Go Premium →</a>
+
+        </div>
+
+
+        <!-- 99999 -->
+        <div class="price-card reveal">
+
+            <span>ADVANCED</span>
+
+            <h3>Digital Pro</h3>
+
+            <div class="price">₹99,999</div>
+
+            <p>For brands demanding more.</p>
+
+            <ul>
+                <li>✓ Premium Custom Design</li>
+                <li>✓ Advanced Website</li>
+                <li>✓ Admin Features</li>
+                <li>✓ Lead System</li>
+                <li>✓ Advanced Forms</li>
+                <li>✓ Analytics</li>
+                <li>✓ 90 Days Support</li>
+            </ul>
+
+            <a href="#contact">Build Digital Pro →</a>
+
+        </div>
+
+
+        <!-- 5 LAKH -->
+        <div class="price-card signature reveal">
+
+            <div class="signature-label">
+                SIGNATURE
+            </div>
+
+            <span>ENTERPRISE DIGITAL PLATFORM</span>
+
+            <h3>Custom Digital Platform</h3>
+
+            <div class="price">₹5,00,000+</div>
+
+            <p>
+                For institutions, organizations and
+                businesses requiring a complete digital ecosystem.
+            </p>
+
+            <ul>
+                <li>✓ Custom Product Strategy</li>
+                <li>✓ 15–30+ Custom Pages</li>
+                <li>✓ Advanced UI/UX</li>
+                <li>✓ Web Application</li>
+                <li>✓ Admin Dashboard</li>
+                <li>✓ Authentication System</li>
+                <li>✓ Database Architecture</li>
+                <li>✓ API Integrations</li>
+                <li>✓ Payment Integration</li>
+                <li>✓ Booking / Management System</li>
+                <li>✓ Analytics</li>
+                <li>✓ SEO & Performance</li>
+                <li>✓ Security Configuration</li>
+                <li>✓ Deployment & Hosting</li>
+                <li>✓ Documentation</li>
+                <li>✓ Training</li>
+                <li>✓ Premium Maintenance</li>
+            </ul>
+
+            <a href="#contact">
+                Request Enterprise Proposal →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+
+<div class="container about-grid">
+
+    <div class="about-visual reveal">
+
+        <div class="about-logo">IW</div>
+
+        <div class="about-floating">
+            <strong>ITESH</strong>
+            <span>WEB STUDIO</span>
+        </div>
 
     </div>
 
 
-    <div class="price-card reveal">
+    <div class="about-content reveal">
 
-      <h3>Premium</h3>
+        <span class="section-label">ABOUT THE STUDIO</span>
 
-      <div class="price">
-        ₹19,999+
-        <small>/ project</small>
-      </div>
+        <h2>
+            We Don't Just
+            <span>Build Websites.</span>
+            We Build Experiences.
+        </h2>
 
-      <ul class="features">
-        <li>Custom Design</li>
-        <li>Advanced Pages</li>
-        <li>E-Commerce Options</li>
-        <li>Booking / Admission</li>
-        <li>Custom Forms</li>
-        <li>SEO Setup</li>
-        <li>Extended Support</li>
-      </ul>
+        <p>
+            Itesh Web Studio is a premium digital studio focused
+            on modern websites, web applications and digital
+            experiences for ambitious businesses.
+        </p>
 
-      <a
-        class="btn btn-outline"
-        href="https://wa.me/919039853662?text=Hello%20Itesh%2C%20I%20want%20a%20Premium%20website."
-        target="_blank">
-        Discuss Project
-      </a>
+        <p>
+            Our approach combines design, technology,
+            performance and business strategy to create
+            digital products that are built for growth.
+        </p>
+
+
+        <div class="about-facts">
+
+            <div>
+                <b>Founder</b>
+                <span>Itesh Baghel</span>
+            </div>
+
+            <div>
+                <b>Studio</b>
+                <span>Itesh Web Studio</span>
+            </div>
+
+            <div>
+                <b>Focus</b>
+                <span>Premium Digital Products</span>
+            </div>
+
+            <div>
+                <b>Location</b>
+                <span>Madhya Pradesh, India</span>
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
+</div>
 
 </section>
 
@@ -515,106 +1061,192 @@ content="Itesh Web Studio creates premium websites for schools, hospitals, busin
 <!-- CTA -->
 <section class="cta">
 
-  <div class="reveal">
+<div class="container cta-box reveal">
 
-    <div class="section-number">
-      Start a Project
-    </div>
+    <span class="section-label">
+        HAVE A BIG IDEA?
+    </span>
 
     <h2>
-      Let's build your
-      <span style="color:#00ff88;">
-        next website.
-      </span>
+        Let's Build Something
+        <span>Remarkable.</span>
     </h2>
 
     <p>
-      Have a business, organization or brand that
-      needs a professional online presence?
+        Tell us what you're building. We'll turn your vision
+        into a premium digital experience.
     </p>
 
-    <a
-      class="btn btn-primary"
-      href="https://wa.me/919039853662?text=Hello%20Itesh%20Web%20Studio%2C%20I%20want%20to%20start%20a%20project."
-      target="_blank">
-      Start Project →
-    </a>
+    <div class="cta-buttons">
 
-  </div>
+        <a href="#contact" class="btn btn-white">
+            Start Your Project →
+        </a>
+
+        <a
+            href="https://wa.me/919039853662"
+            target="_blank"
+            class="btn btn-glass">
+
+            WhatsApp Us
+
+        </a>
+
+    </div>
+
+</div>
 
 </section>
 
 
 <!-- CONTACT -->
-<section id="contact">
+<section class="section contact" id="contact">
 
-  <div class="section-number">
-    07 — Contact
-  </div>
+<div class="container">
 
-  <h2 class="section-title reveal">
-    Let's talk about your business.
-  </h2>
+    <div class="section-head center reveal">
 
-  <div class="contact-grid">
+        <span class="section-label">LET'S TALK</span>
 
-    <div class="contact-info reveal">
-
-      <h3>Itesh Web Studio</h3>
-
-      <p>
-        Premium website design and development
-        for businesses, brands and organizations.
-      </p>
-
-      <ul class="contact-details">
-
-        <li><strong>Phone:</strong> 9039853662</li>
-        <li><strong>Email:</strong> iteshbaghel250@gmail.com</li>
-        <li><strong>Address:</strong> Alirajpure, Jobat</li>
-        <li><strong>Location:</strong> Jobat</li>
-
-      </ul>
+        <h2>
+            Start Your
+            <span>Next Project.</span>
+        </h2>
 
     </div>
 
 
-    <form
-      class="contact-form reveal"
-      onsubmit="sendWhatsApp(event)">
+    <div class="contact-grid">
 
-      <input
-        id="name"
-        type="text"
-        placeholder="Your Name"
-        required>
 
-      <input
-        id="business"
-        type="text"
-        placeholder="Business Name"
-        required>
+        <div class="contact-details reveal">
 
-      <input
-        id="phone"
-        type="tel"
-        placeholder="Phone Number"
-        required>
+            <h3>Tell us about your project.</h3>
 
-      <textarea
-        id="message"
-        placeholder="Tell me what website you need..."
-        required></textarea>
+            <p>
+                Share your requirements and we'll get back
+                to you with the next steps.
+            </p>
 
-      <button
-        class="btn btn-primary"
-        type="submit">
-        Send Enquiry →
-      </button>
 
-    </form>
+            <div class="contact-line">
 
-  </div>
+                <span>PHONE</span>
+
+                <b>+91 90398 53662</b>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <span>EMAIL</span>
+
+                <b>iteshbaghel250@gmail.com</b>
+
+            </div>
+
+
+            <div class="contact-line">
+
+                <span>LOCATION</span>
+
+                <b>Madhya Pradesh, India</b>
+
+            </div>
+
+        </div>
+
+
+        <form class="contact-form reveal" id="contactForm">
+
+            <div class="form-row">
+
+                <div>
+                    <label>Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                        required>
+                </div>
+
+                <div>
+                    <label>Phone</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone number"
+                        required>
+                </div>
+
+            </div>
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email address">
+
+
+            <label>Project Type</label>
+
+            <select id="projectType">
+
+                <option value="">Select project</option>
+
+                <option>Business Website</option>
+                <option>School Platform</option>
+                <option>Hospital Platform</option>
+                <option>Hotel Website</option>
+                <option>Restaurant Website</option>
+                <option>Gym Website</option>
+                <option>E-Commerce</option>
+                <option>Web Application</option>
+                <option>Custom Digital Platform</option>
+
+            </select>
+
+
+            <label>Budget</label>
+
+            <select id="budget">
+
+                <option value="">Select budget</option>
+
+                <option>₹7,999 – ₹20,000</option>
+                <option>₹20,000 – ₹50,000</option>
+                <option>₹50,000 – ₹1,00,000</option>
+                <option>₹1,00,000 – ₹5,00,000</option>
+                <option>₹5,00,000+</option>
+
+            </select>
+
+
+            <label>Project Details</label>
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Tell us about your project..."
+                required></textarea>
+
+
+            <button type="submit" class="btn btn-white submit">
+
+                Send Project Enquiry →
+
+            </button>
+
+            <p id="formStatus"></p>
+
+        </form>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -622,318 +1254,68 @@ content="Itesh Web Studio creates premium websites for schools, hospitals, busin
 <!-- FOOTER -->
 <footer>
 
-  <div>
-    © 2026 <strong>Itesh Web Studio</strong>
-  </div>
+<div class="container footer-top">
 
-  <div>
-    Premium Web Design & Development
-  </div>
+    <div>
+
+        <a href="#home" class="logo">
+
+            <span class="logo-mark">IW</span>
+
+            <span>
+                <b>Itesh</b>
+                <small>Web Studio</small>
+            </span>
+
+        </a>
+
+        <p>
+            Premium digital experiences for ambitious businesses.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</div>
+
+
+<div class="container footer-bottom">
+
+    <span>
+        © 2026 Itesh Web Studio. All Rights Reserved.
+    </span>
+
+    <span>
+        Designed & Developed by Itesh Web Studio.
+    </span>
+
+</div>
 
 </footer>
 
 
 <!-- WHATSAPP -->
 <a
-  class="whatsapp"
-  href="https://wa.me/919039853662?text=Hello%20Itesh%20Web%20Studio%2C%20I%20want%20a%20website."
-  target="_blank"
-  aria-label="WhatsApp">
+href="https://wa.me/919039853662?text=Hello%20Itesh%20Web%20Studio,%20I%20want%20to%20discuss%20a%20website%20project."
+target="_blank"
+class="whatsapp">
 
-  ✆
+    💬
 
 </a>
 
 
-<!-- PROJECT MODAL -->
-<div
-  class="modal"
-  id="projectModal"
-  onclick="closeProject(event)">
-
-  <div
-    class="modal-box"
-    onclick="event.stopPropagation()">
-
-    <button
-      class="close-modal"
-      onclick="closeProject()">
-      ×
-    </button>
-
-    <img
-      id="modalImage"
-      class="modal-image"
-      src=""
-      alt="Project">
-
-    <div class="modal-body">
-
-      <div id="modalTag" class="modal-tag"></div>
-
-      <h2 id="modalTitle"></h2>
-
-      <p id="modalDescription"></p>
-
-      <div
-        id="modalFeatures"
-        class="modal-features">
-      </div>
-
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/919039853662?text=Hello%20Itesh%20Web%20Studio%2C%20I%20want%20a%20similar%20website."
-        target="_blank">
-        Build Similar Website →
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<script>
-
-const projects = {
-
-  school:{
-    title:"School Website",
-    tag:"Education",
-    image:"https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=85",
-    description:"A modern school website concept designed to present school information, facilities, admissions, events and contact details in a clear digital experience.",
-    features:[
-      "School Information",
-      "Admission Enquiry",
-      "Gallery",
-      "Facilities",
-      "Events",
-      "Contact"
-    ]
-  },
-
-  hospital:{
-    title:"Hospital Website",
-    tag:"Healthcare",
-    image:"https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1400&q=85",
-    description:"A clean healthcare website concept focused on departments, doctors, services, enquiries and important hospital information.",
-    features:[
-      "Departments",
-      "Doctors",
-      "Services",
-      "Appointment Enquiry",
-      "Emergency Contact",
-      "Location"
-    ]
-  },
-
-  business:{
-    title:"Business Website",
-    tag:"Corporate",
-    image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85",
-    description:"A premium corporate website concept designed to communicate services, company information, credibility and customer contact options.",
-    features:[
-      "Company Profile",
-      "Services",
-      "Portfolio",
-      "Testimonials",
-      "Contact",
-      "Google Maps"
-    ]
-  },
-
-  ecommerce:{
-    title:"E-Commerce Store",
-    tag:"E-Commerce",
-    image:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=85",
-    description:"A modern e-commerce concept focused on product presentation, categories, shopping experience and customer enquiries.",
-    features:[
-      "Product Catalogue",
-      "Categories",
-      "Product Details",
-      "Cart Concept",
-      "Offers",
-      "Customer Support"
-    ]
-  },
-
-  restaurant:{
-    title:"Restaurant Website",
-    tag:"Hospitality",
-    image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85",
-    description:"A premium restaurant website concept designed to showcase food, ambience, menu, location and customer contact options.",
-    features:[
-      "Digital Menu",
-      "Food Gallery",
-      "About Restaurant",
-      "Reservation Enquiry",
-      "Location",
-      "WhatsApp"
-    ]
-  },
-
-  gym:{
-    title:"Gym Website",
-    tag:"Fitness",
-    image:"https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",
-    description:"A high-energy gym website concept designed to showcase training programs, facilities, memberships and enquiry options.",
-    features:[
-      "Membership Plans",
-      "Training Programs",
-      "Gallery",
-      "Trainers",
-      "Facilities",
-      "Enquiry"
-    ]
-  },
-
-  panchayati:{
-    title:"Panchayati Website",
-    tag:"Public Service",
-    image:"https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400&q=85",
-    description:"An information-focused local public service website concept for notices, schemes, important information, documents and contact details.",
-    features:[
-      "Notices",
-      "Government Schemes",
-      "Important Documents",
-      "Announcements",
-      "Contact",
-      "Location"
-    ]
-  }
-
-};
-
-
-function openProject(projectName){
-
-  const project = projects[projectName];
-
-  if(!project) return;
-
-  document.getElementById("modalImage").src = project.image;
-  document.getElementById("modalTag").textContent = project.tag;
-  document.getElementById("modalTitle").textContent = project.title;
-  document.getElementById("modalDescription").textContent = project.description;
-
-  const features = document.getElementById("modalFeatures");
-
-  features.innerHTML = "";
-
-  project.features.forEach(function(feature){
-
-    const div = document.createElement("div");
-
-    div.className = "modal-feature";
-
-    div.textContent = "✓ " + feature;
-
-    features.appendChild(div);
-
-  });
-
-  document
-    .getElementById("projectModal")
-    .classList.add("active");
-
-  document.body.classList.add("modal-open");
-}
-
-
-function closeProject(){
-
-  document
-    .getElementById("projectModal")
-    .classList.remove("active");
-
-  document.body.classList.remove("modal-open");
-}
-
-
-document.addEventListener(
-  "keydown",
-  function(event){
-
-    if(event.key === "Escape"){
-      closeProject();
-    }
-
-  }
-);
-
-
-const revealElements =
-  document.querySelectorAll(".reveal");
-
-const observer =
-  new IntersectionObserver(
-
-    function(entries){
-
-      entries.forEach(function(entry){
-
-        if(entry.isIntersecting){
-
-          entry.target.classList.add("active");
-
-        }
-
-      });
-
-    },
-
-    {
-      threshold:.12
-    }
-
-  );
-
-
-revealElements.forEach(function(element){
-  observer.observe(element);
-});
-
-
-function sendWhatsApp(event){
-
-  event.preventDefault();
-
-  const name =
-    document.getElementById("name").value;
-
-  const business =
-    document.getElementById("business").value;
-
-  const phone =
-    document.getElementById("phone").value;
-
-  const message =
-    document.getElementById("message").value;
-
-  const whatsappMessage =
-    "Hello Itesh Web Studio!%0A%0A" +
-    "Name: " +
-    encodeURIComponent(name) +
-    "%0A" +
-    "Business: " +
-    encodeURIComponent(business) +
-    "%0A" +
-    "Phone: " +
-    encodeURIComponent(phone) +
-    "%0A" +
-    "Requirement: " +
-    encodeURIComponent(message);
-
-  const url =
-    "https://wa.me/919039853662?text=" +
-    whatsappMessage;
-
-  window.open(url,"_blank");
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
