@@ -5,12 +5,12 @@
 }
 
 :root{
-    --bg: #0f172a;
-    --bg2: #09093fb;
+    --bg: #FAF9F6;
+    --bg2: #F1EFEC;
     --card: #ffffff;
-    --text: #fff;
-    --muted: #8c8c96;
-    --line: rgba(255,255,255,.10);
+    --text: #171717;
+    --muted: #666666;
+    --line: #E5E1DD;
     --white: #ffffff;
     --container: 1220px;
 }
@@ -20,7 +20,7 @@ html{
 }
 
 body{
-    background: #0f172a;
+    background: #FAF9F6;
         color: var(--text);
            font:family: inter, sans-serif;
     line-height: 1.6;
@@ -1496,4 +1496,8 @@ footer{
         gap:8px;
     }
 
+}
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5E1DD;
 }
