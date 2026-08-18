@@ -54,7 +54,7 @@ select{
 
 img,
 video{
-    display:block;
+    display:white;
     max-width:100%;
 }
 
