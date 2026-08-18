@@ -29,11 +29,13 @@ body{
     
     transparent 25%
         ),
-        var(--bg);
-    color:var(--text);
-    font-family:Inter,sans-serif;
-    line-height:1.6;
-    overflow-x:hidden;
+        body{
+    background: #C4B5FD !important;
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 }
 
 body.no-scroll{
