@@ -26,17 +26,13 @@ body{
     line-height: 1.6;
     overflow-x: hidden;
 }
-    
-    transparent 25%
-        ),
-        body{
-    background: var(--bg);
+               
+body{
+    background: #ffffff;
     color: var(--text);
     font-family: Inter, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-}
-}
 
 body.no-scroll{
     overflow:hidden;
