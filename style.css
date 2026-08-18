@@ -20,20 +20,13 @@ html{
 }
 
 body{
-    background: #C4B5FD;
+    background: #ffffff;
         color: var(--text);
            font:family: inter, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
-               
-body{
-    background: #ffffff;
-    color: var(--text);
-    font-family: Inter, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-
+          
 body.no-scroll{
     overflow:hidden;
 }
@@ -242,7 +235,8 @@ nav a.active{
     border-radius:50%;
     filter:blur(80px);
     pointer-events:none;
-}
+    display:none;
+    }
 
 .orb-one{
     width:500px;
