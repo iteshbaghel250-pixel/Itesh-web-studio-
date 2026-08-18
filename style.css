@@ -5,8 +5,8 @@
 }
 
 :root{
-    --bg: #FAF9F6;
-    --bg2: #F1EFEC;
+    --bg: #C4B5FD;
+    --bg2: #111827;
     --card: #ffffff;
     --text: #171717;
     --muted: #666666;
@@ -30,7 +30,7 @@ body{
     transparent 25%
         ),
         body{
-    background: #C4B5FD !important;
+    background: var(--bg);
     color: var(--text);
     font-family: Inter, sans-serif;
     line-height: 1.6;
