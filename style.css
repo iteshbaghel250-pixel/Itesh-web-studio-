@@ -51,7 +51,7 @@ video{
 
 /* VIDEO KA BACKGROUND */
 video {
-   background: #0B0F19;
+   background: #3B82FD;
 } 
 .container{
     width:min(calc(100% - 40px),var(--container));
