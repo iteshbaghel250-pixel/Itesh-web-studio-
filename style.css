@@ -518,7 +518,7 @@ nav a.active{
     padding:30px;
     border:1px solid var(--line);
     border-radius:24px;
-    background:linear-gradient(145deg,#111114,#09090b);
+    background:linear-gradient(145deg,#ffffff,#f3f0ff);
     overflow:hidden;
     transition:.4s;
 }
