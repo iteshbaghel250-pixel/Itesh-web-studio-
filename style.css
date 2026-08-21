@@ -45,13 +45,13 @@ select{
 
 img,
 video{
-    display:block;
+    display:white;
     max-width:100%;
 }
 
 /* VIDEO KA BACKGROUND */
 video {
-   background: #3B82FD;
+   background: #FFFFFF;
    filter:brightness(0.65) saturate(.4) hue-rotate(15degi);
 } 
 .container{
@@ -343,7 +343,7 @@ nav a.active{
 }
 
 .hero-numbers span{
-    display:block;
+    display:white;
     color:#555;
     font-size:9px;
     letter-spacing:1px;
@@ -354,7 +354,7 @@ nav a.active{
 /* BROWSER */
 
 .browser{
-    background:#0d0d10;
+    background:#FFFFFF;
     border:1px solid #29292e;
     border-radius:25px;
     overflow:hidden;
@@ -487,7 +487,7 @@ nav a.active{
 }
 
 .section-head h2 span{
-    display:block;
+    display:white;
     color:#777;
 }
 
@@ -518,14 +518,14 @@ nav a.active{
     padding:30px;
     border:1px solid var(--line);
     border-radius:24px;
-    background:linear-gradient(145deg, #7C3AED, #7C3AED);
+    background:linear-gradient(135deg, #EFFFFF 0%, #F3F0FF 45%; #E8F1FF 100%)
     overflow:hidden;
     transition:.4s;
 }
 
 .service:hover{
-    transform:translateY(-8px);
-    border-color:#444;
+    transform:translateY(-5px);
+    border-color:#FFFFFF;
 }
 
 .service-number{
@@ -563,7 +563,7 @@ nav a.active{
 
 .showreel-section,
 .demos-section{
-    background:#08080a;
+    background:FFFFFFa;
 }
 
 .showreel{
@@ -587,7 +587,7 @@ nav a.active{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.4));
+    background:linear-gradient(rgba(255, 255, 255, 1). rgba(255, 255, 255, 1));
     transition:.4s;
     pointer-events:none;
 }
@@ -628,7 +628,7 @@ nav a.active{
     border:1px solid var(--line);
     border-radius:25px;
     overflow:hidden;
-    background:#0d0d10;
+    background:#FFFFFF;
 }
 
 .project-big{
@@ -669,7 +669,7 @@ nav a.active{
     width:45px;
     height:45px;
     border-radius:50%;
-    background:rgba(0,0,0,.65);
+    background:rgba(255, 255, 255, 0.65);
     display:grid;
     place-items:center;
     backdrop-filter:blur(10px);
@@ -733,7 +733,7 @@ nav a.active{
     border:1px solid var(--line);
     border-radius:20px;
     overflow:hidden;
-    background:#101014;
+    background:#FFFFFF;
     transition:.4s;
 }
 
@@ -1112,7 +1112,7 @@ nav a.active{
 /* CONTACT */
 
 .contact{
-    background:#08080a;
+    background:#FFFFFF;
 }
 
 .contact-grid{
@@ -1179,7 +1179,7 @@ nav a.active{
     border:1px solid #25252a;
     border-radius:11px;
     outline:none;
-    background:#08080a;
+    background:#FFFFFF;
     color:#fff;
 }
 
