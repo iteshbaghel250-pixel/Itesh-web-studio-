@@ -5,8 +5,8 @@
 }
 
 :root{
-    --bg: #f8f7ff;
-    --bg2: #FFFFFF;
+    --bg: #F8F7FF;
+    --bg2: #F8F7FF;
     --card: linear-gradient(135deg, #6d28d9, #9333ea,); 
     --text: #171717;
     --muted: #68687a;
