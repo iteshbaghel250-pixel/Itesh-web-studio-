@@ -54,7 +54,7 @@ video{
 
 /* VIDEO KA BACKGROUND */
 video {
-   background: #FFFFFF;
+   background: #101016;
    filter:brightness(0.65) saturate(.4) hue-rotate(15degi);
 } 
 .container{
@@ -135,7 +135,7 @@ video {
     top:0;
     width:100%;
     z-index:1000;
-    background:rgba(255, 255,255, 0.85);
+    background:rgba(255, 255,255, 0.92);
     backdrop-filter:blur(20px);
     border-bottom:1px solid var(--line);
 }
@@ -166,12 +166,12 @@ video {
 }
 
 .logo b{
-    display:white;
+    display:flex;
     line-height:1;
 }
 
 .logo small{
-    display:white;
+    display:flex;
     margin-top:4px;
     color:#666;
     font-size:8px;
@@ -245,7 +245,7 @@ nav a.active{
 .orb-one{
     width:500px;
     height:500px;
-    background:rgba(255,255,255,.04);
+    background:rgba(9333EA);
     right:-250px;
     top:-200px;
 }
@@ -253,7 +253,7 @@ nav a.active{
 .orb-two{
     width:350px;
     height:350px;
-    background:rgba(255,255,255,.025);
+    background:rgba(9333EA);
     left:-200px;
     bottom:-100px;
 }
@@ -287,13 +287,13 @@ nav a.active{
 }
 
 .hero h1 span{
-    display:block;
+    display:inline;
     color:#777;
 }
 
 .hero-description{
     max-width:580px;
-    color:#888;
+    color:#686;
     margin-top:30px;
     font-size:15px;
 }
@@ -321,18 +321,18 @@ nav a.active{
 }
 
 .btn-white{
-    background:#fff;
-    color:#000;
+    background:#F8F;
+    color:#111;
 }
 
 .btn-glass{
-    background:rgba(255,255,255,.04);
-    border-color:#333;
+    background:rgba(255, 255, 255, 0.7);
+    border-color 1px solid #E8E5F2;
 }
 
 .btn-glass:hover{
-    background:#fff;
-    color:#000;
+    background:#111;
+    color:#111;
 }
 
 .hero-numbers{
@@ -357,7 +357,7 @@ nav a.active{
 /* BROWSER */
 
 .browser{
-    background:#FFFFFF;
+    background:#F8F7FF;
     border:1px solid #29292e;
     border-radius:25px;
     overflow:hidden;
