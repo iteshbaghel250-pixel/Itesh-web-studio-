@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barwani Bucks Café & Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header / Banner */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #ffc107;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Timing & Info Section */
+        .info-bar {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .info-bar span {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #e74c3c;
+            display: block;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .order-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Barwani Bucks Café</h1>
+        <p>Delicious Fast Food, Beverages & Aesthetic Vibes</p>
+    </header>
+
+    <!-- Timing & Info Bar -->
+    <div class="info-bar">
+        <div>⏰ खुलने का समय: <span>सुबह 11:30 AM - रात 10:30 PM</span></div>
+        <div>📍 स्थान: <span>Asha Gram Road, Barwani</span></div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="container">
+        <h2 class="section-title">Our Popular Menu</h2>
+        
+        <div class="menu-grid">
+            
+            <!-- Item 1: Cheese Pav Bhaji -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600" alt="Cheese Pav Bhaji">
+                <div class="card-body">
+                    <h3 class="card-title">Butter Cheese Pav Bhaji</h3>
+                    <p class="card-desc">मक्खन और चीज़ से भरपूर मसालेदार पाव भाजी।</p>
+                    <div class="card-footer">
+                        <span class="price">₹140</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Paneer Tikka French Fries -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?q=80&w=600" alt="Paneer Tikka Fries">
+                <div class="card-body">
+                    <h3 class="card-title">Paneer Tikka Fries</h3>
+                    <p class="card-desc">मसालेदार पनीर टिक्का और चीज़ी फ्राइज का बेहतरीन कॉम्बिनेशन।</p>
+                    <div class="card-footer">
+                        <span class="price">₹160</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Dry Fruit Thick Shake -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600" alt="Dry Fruit Shake">
+                <div class="card-body">
+                    <h3 class="card-title">Dry Fruit Thick Shake</h3>
+                    <p class="card-desc">काजू, बादाम और पिस्ता से भरा हुआ गाढ़ा और टेस्टी शेक।</p>
+                    <div class="card-footer">
+                        <span class="price">₹130</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Red Sauce Pasta -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281270?q=80&w=600" alt="Pink Sauce Pasta">
+                <div class="card-body">
+                    <h3 class="card-title">Creamy Veg Pasta</h3>
+                    <p class="card-desc">सब्जियों और चीज़ सॉस के साथ बना क्रीमी पास्ता।</p>
+                    <div class="card-footer">
+                        <span class="price">₹150</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5: Veg Cheese Burger -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600" alt="Burger">
+                <div class="card-body">
+                    <h3 class="card-title">Classic Veg Cheese Burger</h3>
+                    <p class="card-desc">चीज़ स्लाइस, ताज़ी सब्जियों और सॉस के साथ बर्गर्स।</p>
+                    <div class="card-footer">
+                        <span class="price">₹99</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6: Grilled Sandwich -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=600" alt="Grilled Sandwich">
+                <div class="card-body">
+                    <h3 class="card-title">Veg Grilled Sandwich</h3>
+                    <p class="card-desc">चटनी और सॉस के साथ क्रिस्पी ग्रिल्ड सैंडविच।</p>
+                    <div class="card-footer">
+                        <span class="price">₹110</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7: Paneer Loaded Pizza -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600" alt="Paneer Pizza">
+                <div class="card-body">
+                    <h3 class="card-title">Paneer Loaded Pizza</h3>
+                    <p class="card-desc">पनीर, ऑलिव्स, कॉर्न और एक्स्ट्रा चीज़ से लोडेड पिज्जा।</p>
+                    <div class="card-footer">
+                        <span class="price">₹220</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8: KitKat Crunch Shake -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?q=80&w=600" alt="Kitkat Shake">
+                <div class="card-body">
+                    <h3 class="card-title">KitKat Crunch Shake</h3>
+                    <p class="card-desc">किटकेट क्रंच और चॉकलेट सॉस के साथ स्पेशल थिक शेक।</p>
+                    <div class="card-footer">
+                        <span class="price">₹150</span>
+                        <button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Barwani Bucks Café. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
