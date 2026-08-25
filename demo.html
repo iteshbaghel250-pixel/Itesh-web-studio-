@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>AURELIA GRAND — Luxury Hotel</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --gold:#d8b36a;
+    --gold2:#f1d493;
+    --black:#070707;
+    --dark:#0d0d0d;
+    --white:#f7f3eb;
+    --muted:#aaa59d;
+    --line:rgba(255,255,255,.12);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:var(--white);
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =========================
+   PRELOADER
+========================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    background:#050505;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.loader-logo{
+    font-family:"Playfair Display",serif;
+    font-size:42px;
+    letter-spacing:8px;
+}
+
+.loader-logo span{
+    color:var(--gold);
+}
+
+.loader-line{
+    width:180px;
+    height:1px;
+    background:#333;
+    margin-top:25px;
+    overflow:hidden;
+}
+
+.loader-line i{
+    display:block;
+    width:0%;
+    height:100%;
+    background:var(--gold);
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:5000;
+
+    padding:25px 5%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    transition:.5s;
+}
+
+nav.scrolled{
+    padding:15px 5%;
+    background:rgba(5,5,5,.78);
+    backdrop-filter:blur(25px);
+    border-bottom:1px solid var(--line);
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    letter-spacing:4px;
+}
+
+.logo small{
+    display:block;
+    color:var(--gold);
+    font-family:"DM Sans";
+    font-size:8px;
+    letter-spacing:6px;
+    margin-top:4px;
+}
+
+.links{
+    display:flex;
+    gap:35px;
+}
+
+.links a{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#ddd;
+    position:relative;
+}
+
+.links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:1px;
+    background:var(--gold);
+    transition:.4s;
+}
+
+.links a:hover::after{
+    width:100%;
+}
+
+.book{
+    padding:13px 22px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:2px;
+    transition:.4s;
+}
+
+.book:hover{
+    background:var(--gold);
+    color:#000;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:100vh;
+    min-height:700px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.5)
+      ),
+      url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=95")
+      center/cover;
+    transform:scale(1.08);
+}
+
+.hero-bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,.45),
+        transparent 40%,
+        #070707 100%
+      );
+}
+
+#hero3d{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.65;
+}
+
+.hero-content{
+    position:absolute;
+    left:8%;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:850px;
+    z-index:5;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    font-size:11px;
+    letter-spacing:7px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(65px,9vw,145px);
+    line-height:.82;
+    font-weight:500;
+    letter-spacing:-5px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+    font-style:italic;
+}
+
+.hero-copy{
+    margin-top:30px;
+    max-width:550px;
+    color:#ccc;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.gold-btn{
+    padding:17px 28px;
+    background:var(--gold);
+    color:#080808;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:2px;
+    transition:.4s;
+}
+
+.gold-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 50px rgba(216,179,106,.25);
+}
+
+.outline-btn{
+    padding:17px 28px;
+    border:1px solid rgba(255,255,255,.3);
+    font-size:11px;
+    letter-spacing:2px;
+    backdrop-filter:blur(10px);
+}
+
+.outline-btn:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+
+/* =========================
+   HERO SIDE INFO
+========================= */
+
+.hero-side{
+    position:absolute;
+    right:5%;
+    bottom:60px;
+    z-index:5;
+    text-align:right;
+}
+
+.hero-side span{
+    display:block;
+    color:#888;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:7px;
+}
+
+.hero-side strong{
+    font-family:"Playfair Display",serif;
+    font-size:20px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    padding:150px 8%;
+    background:#070707;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:100px;
+    align-items:center;
+}
+
+.section-label{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.intro h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(45px,6vw,85px);
+    font-weight:500;
+    line-height:.95;
+}
+
+.intro h2 em{
+    color:var(--gold);
+}
+
+.intro-text{
+    color:#999;
+    font-size:17px;
+    line-height:2;
+}
+
+.signature{
+    margin-top:30px;
+    font-family:"Playfair Display",serif;
+    color:var(--gold);
+    font-size:28px;
+    font-style:italic;
+}
+
+
+/* =========================
+   ROOMS
+========================= */
+
+.rooms{
+    padding:120px 6%;
+}
+
+.heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:60px;
+}
+
+.heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:75px;
+    font-weight:500;
+    line-height:.9;
+}
+
+.heading h2 span{
+    color:var(--gold);
+}
+
+.heading p{
+    max-width:430px;
+    color:#888;
+    line-height:1.8;
+}
+
+.room-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.room{
+    height:560px;
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:#111;
+}
+
+.room img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.room:hover img{
+    transform:scale(1.08);
+}
+
+.room::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(
+        transparent 30%,
+        rgba(0,0,0,.9)
+      );
+}
+
+.room-info{
+    position:absolute;
+    z-index:2;
+    left:30px;
+    right:30px;
+    bottom:30px;
+}
+
+.room-info small{
+    color:var(--gold);
+    letter-spacing:3px;
+}
+
+.room-info h3{
+    font-family:"Playfair Display",serif;
+    font-size:38px;
+    margin:8px 0;
+}
+
+.room-info p{
+    color:#aaa;
+    font-size:12px;
+    line-height:1.7;
+}
+
+.room-info .price{
+    margin-top:15px;
+    color:#fff;
+    font-weight:700;
+}
+
+
+/* =========================
+   PARALLAX IMAGE
+========================= */
+
+.parallax{
+    height:80vh;
+    min-height:600px;
+    position:relative;
+    background:
+      linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.65)
+      ),
+      url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=2200&q=95")
+      center/cover fixed;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.parallax h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(55px,8vw,120px);
+    line-height:.85;
+}
+
+.parallax h2 span{
+    color:var(--gold);
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+    padding:150px 8%;
+}
+
+.exp-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.exp-image{
+    height:650px;
+    overflow:hidden;
+}
+
+.exp-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.exp-image:hover img{
+    transform:scale(1.05);
+}
+
+.exp-copy h2{
+    font-family:"Playfair Display",serif;
+    font-size:70px;
+    line-height:.9;
+}
+
+.exp-copy h2 span{
+    color:var(--gold);
+}
+
+.exp-copy p{
+    margin-top:30px;
+    color:#888;
+    line-height:2;
+}
+
+.features{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.feature{
+    border:1px solid var(--line);
+    padding:25px;
+}
+
+.feature strong{
+    color:var(--gold);
+    font-family:"Playfair Display",serif;
+    font-size:28px;
+}
+
+.feature span{
+    display:block;
+    color:#aaa;
+    font-size:11px;
+    margin-top:7px;
+}
+
+
+/* =========================
+   DINING
+========================= */
+
+.dining{
+    padding:130px 6%;
+    background:#0a0a0a;
+}
+
+.dining-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.dining-card{
+    height:430px;
+    overflow:hidden;
+    position:relative;
+}
+
+.dining-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.8s;
+}
+
+.dining-card:hover img{
+    transform:scale(1.1);
+}
+
+.dining-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+      transparent 30%,
+      rgba(0,0,0,.85)
+    );
+}
+
+.dining-card div{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    z-index:2;
+}
+
+.dining-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+}
+
+.dining-card p{
+    color:#aaa;
+    font-size:11px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   SPA
+========================= */
+
+.spa{
+    padding:150px 8%;
+}
+
+.spa-box{
+    min-height:650px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+.spa-box img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.spa-box::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.2)
+      );
+}
+
+.spa-content{
+    position:relative;
+    z-index:2;
+    padding:8%;
+    max-width:650px;
+}
+
+.spa-content h2{
+    font-family:"Playfair Display",serif;
+    font-size:80px;
+    line-height:.9;
+}
+
+.spa-content h2 span{
+    color:var(--gold);
+}
+
+.spa-content p{
+    margin:30px 0;
+    color:#bbb;
+    line-height:1.9;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    padding:120px 6%;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    grid-auto-rows:300px;
+    gap:15px;
+}
+
+.gallery-item{
+    overflow:hidden;
+}
+
+.gallery-item.big{
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.8s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking{
+    padding:150px 8%;
+    background:#0b0b0b;
+}
+
+.booking-box{
+    border:1px solid var(--line);
+    padding:70px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.booking-box h2{
+    font-family:"Playfair Display",serif;
+    font-size:75px;
+    line-height:.9;
+}
+
+.booking-box h2 span{
+    color:var(--gold);
+}
+
+.booking-form{
+    display:grid;
+    gap:15px;
+}
+
+.booking-form input,
+.booking-form select{
+    width:100%;
+    background:#111;
+    color:white;
+    border:1px solid #292929;
+    padding:18px;
+    outline:none;
+}
+
+.booking-form input:focus,
+.booking-form select:focus{
+    border-color:var(--gold);
+}
+
+.booking-form button{
+    padding:18px;
+    border:0;
+    background:var(--gold);
+    font-weight:800;
+    cursor:pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:70px 6%;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+}
+
+.footer-logo span{
+    color:var(--gold);
+}
+
+footer p,
+footer a{
+    color:#777;
+    font-size:12px;
+    line-height:2;
+}
+
+footer h4{
+    color:white;
+    margin-bottom:15px;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .links{
+        display:none;
+    }
+
+    .hero-content{
+        left:6%;
+        right:6%;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .intro-grid,
+    .exp-grid,
+    .booking-box{
+        grid-template-columns:1fr;
+    }
+
+    .room-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dining-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-item.big{
+        grid-row:span 1;
+    }
+
+    footer{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:18px;
+    }
+
+    .book{
+        padding:10px 14px;
+    }
+
+    .hero{
+        min-height:800px;
+    }
+
+    .hero h1{
+        font-size:57px;
+    }
+
+    .hero-copy{
+        font-size:13px;
+    }
+
+    .hero-side{
+        display:none;
+    }
+
+    .heading{
+        display:block;
+    }
+
+    .heading h2{
+        font-size:55px;
+    }
+
+    .heading p{
+        margin-top:25px;
+    }
+
+    .room{
+        height:480px;
+    }
+
+    .dining-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dining-card{
+        height:400px;
+    }
+
+    .spa-content h2{
+        font-size:55px;
+    }
+
+    .booking-box{
+        padding:30px;
+    }
+
+    .booking-box h2{
+        font-size:55px;
+    }
+
+    footer{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= PRELOADER ================= -->
+
+<div class="loader" id="loader">
+
+    <div class="loader-logo">
+        AURELIA <span>GRAND</span>
+    </div>
+
+    <div class="loader-line">
+        <i id="loaderLine"></i>
+    </div>
+
+</div>
+
+
+<!-- ================= NAV ================= -->
+
+<nav id="nav">
+
+    <a href="#" class="logo">
+        AURELIA
+        <small>LUXURY HOTEL & RESORT</small>
+    </a>
+
+    <div class="links">
+        <a href="#rooms">ROOMS</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#dining">DINING</a>
+        <a href="#spa">SPA</a>
+        <a href="#gallery">GALLERY</a>
+    </div>
+
+    <a href="#booking" class="book">
+        BOOK YOUR STAY
+    </a>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-bg"></div>
+
+    <canvas id="hero3d"></canvas>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            WELCOME TO AURELIA GRAND
+        </div>
+
+        <h1>
+            STAY<br>
+            <span>BEYOND</span><br>
+            ORDINARY.
+        </h1>
+
+        <p class="hero-copy">
+            An extraordinary luxury escape where
+            architecture, hospitality, fine dining and
+            unforgettable experiences come together.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#rooms" class="gold-btn">
+                EXPLORE ROOMS →
+            </a>
+
+            <a href="#booking" class="outline-btn">
+                RESERVE YOUR STAY
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-side">
+
+        <span>LOCATION</span>
+
+        <strong>INDIA • 27°N</strong>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="intro-grid">
+
+        <div>
+
+            <div class="section-label">
+                THE AURELIA PHILOSOPHY
+            </div>
+
+            <h2>
+                Luxury is<br>
+                <em>an experience.</em>
+            </h2>
+
+        </div>
+
+        <div>
+
+            <p class="intro-text">
+                Aurelia Grand was created for travellers
+                who expect more than a room. Every detail,
+                from the architecture to the smallest
+                hospitality ritual, is designed to create
+                moments worth remembering.
+            </p>
+
+            <div class="signature">
+                — The Aurelia Experience
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ROOMS ================= -->
+
+<section class="rooms" id="rooms">
+
+    <div class="heading">
+
+        <div>
+
+            <div class="section-label">
+                PRIVATE RETREATS
+            </div>
+
+            <h2>
+                OUR<br>
+                <span>ROOMS.</span>
+            </h2>
+
+        </div>
+
+        <p>
+            Sophisticated spaces designed around
+            natural light, refined materials and
+            absolute comfort.
+        </p>
+
+    </div>
+
+
+    <div class="room-grid">
+
+
+        <article class="room">
+
+            <img
+            src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=95">
+
+            <div class="room-info">
+
+                <small>01 • SIGNATURE</small>
+
+                <h3>Grand Deluxe</h3>
+
+                <p>
+                    King bed • City view • Rain shower
+                </p>
+
+                <div class="price">
+                    FROM ₹18,000 / NIGHT
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="room">
+
+            <img
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=95">
+
+            <div class="room-info">
+
+                <small>02 • PREMIUM</small>
+
+                <h3>Royal Suite</h3>
+
+                <p>
+                    Living room • Private balcony • Butler
+                </p>
+
+                <div class="price">
+                    FROM ₹32,000 / NIGHT
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="room">
+
+            <img
+            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=95">
+
+            <div class="room-info">
+
+                <small>03 • SIGNATURE</small>
+
+                <h3>Presidential</h3>
+
+                <p>
+                    Private lounge • Dining • Luxury bath
+                </p>
+
+                <div class="price">
+                    FROM ₹75,000 / NIGHT
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PARALLAX ================= -->
+
+<section class="parallax">
+
+    <div>
+
+        <div class="section-label">
+            MORE THAN A HOTEL
+        </div>
+
+        <h2>
+            ARRIVE AS A<br>
+            <span>GUEST.</span><br>
+            LEAVE AS FAMILY.
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="experience" id="experience">
+
+    <div class="exp-grid">
+
+        <div class="exp-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1500&q=95">
+
+        </div>
+
+
+        <div class="exp-copy">
+
+            <div class="section-label">
+                SIGNATURE EXPERIENCE
+            </div>
+
+            <h2>
+                MOMENTS<br>
+                <span>MATTER.</span>
+            </h2>
+
+            <p>
+                Wake up to beautiful views, spend the
+                afternoon beside the pool, enjoy an
+                unforgettable dinner and end the night
+                surrounded by exceptional comfort.
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+                    <strong>01</strong>
+                    <span>Infinity Pool</span>
+                </div>
+
+                <div class="feature">
+                    <strong>02</strong>
+                    <span>24/7 Concierge</span>
+                </div>
+
+                <div class="feature">
+                    <strong>03</strong>
+                    <span>Luxury Spa</span>
+                </div>
+
+                <div class="feature">
+                    <strong>04</strong>
+                    <span>Fine Dining</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DINING ================= -->
+
+<section class="dining" id="dining">
+
+    <div class="heading">
+
+        <div>
+
+            <div class="section-label">
+                CULINARY JOURNEY
+            </div>
+
+            <h2>
+                TASTE<br>
+                <span>THE MOMENT.</span>
+            </h2>
+
+        </div>
+
+        <p>
+            From sunrise breakfast to late-night
+            cocktails, every plate is crafted
+            with intention.
+        </p>
+
+    </div>
+
+
+    <div class="dining-grid">
+
+
+        <div class="dining-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=95">
+
+            <div>
+                <h3>Fine Dining</h3>
+                <p>Modern Indian • International</p>
+            </div>
+
+        </div>
+
+
+        <div class="dining-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=95">
+
+            <div>
+                <h3>Sky Lounge</h3>
+                <p>Sunsets • Signature Drinks</p>
+            </div>
+
+        </div>
+
+
+        <div class="dining-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=900&q=95">
+
+            <div>
+                <h3>Breakfast</h3>
+                <p>Fresh • Local • International</p>
+            </div>
+
+        </div>
+
+
+        <div class="dining-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=95">
+
+            <div>
+                <h3>Private Dining</h3>
+                <p>Curated Experiences</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= SPA ================= -->
+
+<section class="spa" id="spa">
+
+    <div class="spa-box">
+
+        <img
+        src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1800&q=95">
+
+        <div class="spa-content">
+
+            <div class="section-label">
+                WELLNESS
+            </div>
+
+            <h2>
+                REST.<br>
+                <span>RESET.</span><br>
+                REPEAT.
+            </h2>
+
+            <p>
+                Escape into a world of calm with
+                signature treatments, aromatherapy,
+                massages and private wellness rituals.
+            </p>
+
+            <a href="#booking" class="gold-btn">
+                DISCOVER WELLNESS →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+    <div class="heading">
+
+        <div>
+
+            <div class="section-label">
+                A VISUAL JOURNEY
+            </div>
+
+            <h2>
+                THE<br>
+                <span>GALLERY.</span>
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item big">
+
+            <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=95">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=95">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=95">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=95">
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=95">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking" id="booking">
+
+    <div class="booking-box">
+
+        <div>
+
+            <div class="section-label">
+                RESERVE YOUR EXPERIENCE
+            </div>
+
+            <h2>
+                YOUR<br>
+                <span>ESCAPE</span><br>
+                AWAITS.
+            </h2>
+
+        </div>
+
+
+        <form class="booking-form">
+
+            <input
+            type="text"
+            placeholder="Full Name"
+            required>
+
+            <input
+            type="email"
+            placeholder="Email Address"
+            required>
+
+            <input
+            type="date"
+            required>
+
+            <select required>
+
+                <option value="">
+                    Select Room
+                </option>
+
+                <option>
+                    Grand Deluxe
+                </option>
+
+                <option>
+                    Royal Suite
+                </option>
+
+                <option>
+                    Presidential Suite
+                </option>
+
+            </select>
+
+            <button type="submit">
+                REQUEST RESERVATION →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+
+        <div class="footer-logo">
+            AURELIA <span>GRAND</span>
+        </div>
+
+        <p>
+            Luxury Hotel & Resort<br>
+            Where extraordinary stays begin.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>EXPLORE</h4>
+
+        <a href="#rooms">Rooms</a><br>
+        <a href="#dining">Dining</a><br>
+        <a href="#spa">Spa</a><br>
+        <a href="#gallery">Gallery</a>
+
+    </div>
+
+
+    <div>
+
+        <h4>CONTACT</h4>
+
+        <p>
+            +91 90000 00000<br>
+            reservations@aureliagrand.com
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>LOCATION</h4>
+
+        <p>
+            Luxury Boulevard<br>
+            India
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   LOADER
+========================= */
+
+const loaderLine =
+document.getElementById("loaderLine");
+
+gsap.to(loaderLine,{
+    width:"100%",
+    duration:1.8,
+    ease:"power2.inOut"
+});
+
+window.addEventListener("load",()=>{
+
+    gsap.to(".loader",{
+        opacity:0,
+        duration:.8,
+        delay:.2,
+        onComplete:()=>{
+            document.querySelector(".loader").style.display="none";
+        }
+    });
+
+});
+
+
+/* =========================
+   NAV SCROLL
+========================= */
+
+window.addEventListener("scroll",()=>{
+
+    const nav =
+    document.getElementById("nav");
+
+    if(window.scrollY>80){
+        nav.classList.add("scrolled");
+    }else{
+        nav.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================
+   THREE.JS 3D
+========================= */
+
+const canvas =
+document.getElementById("hero3d");
+
+const scene =
+new THREE.Scene();
+
+const camera =
+new THREE.PerspectiveCamera(
+    55,
+    innerWidth/innerHeight,
+    .1,
+    1000
+);
+
+camera.position.z=5;
+
+
+const renderer =
+new THREE.WebGLRenderer({
+    canvas:canvas,
+    alpha:true,
+    antialias:true
+});
+
+renderer.setPixelRatio(
+    Math.min(devicePixelRatio,2)
+);
+
+renderer.setSize(
+    innerWidth,
+    innerHeight
+);
+
+
+/* PARTICLE FIELD */
+
+const count=1200;
+
+const geometry=
+new THREE.BufferGeometry();
+
+const positions=
+new Float32Array(count*3);
+
+for(let i=0;i<count*3;i++){
+
+    positions[i]=
+    (Math.random()-.5)*18;
+
+}
+
+geometry.setAttribute(
+    "position",
+    new THREE.BufferAttribute(
+        positions,
+        3
+    )
+);
+
+const material=
+new THREE.PointsMaterial({
+    color:0xd8b36a,
+    size:.018,
+    transparent:true,
+    opacity:.65
+});
+
+const particles=
+new THREE.Points(
+    geometry,
+    material
+);
+
+scene.add(particles);
+
+
+/* GOLDEN TORUS */
+
+const torusGeometry=
+new THREE.TorusGeometry(
+    2.2,
+    .008,
+    16,
+    180
+);
+
+const torusMaterial=
+new THREE.MeshBasicMaterial({
+    color:0xd8b36a,
+    transparent:true,
+    opacity:.5
+});
+
+const torus=
+new THREE.Mesh(
+    torusGeometry,
+    torusMaterial
+);
+
+torus.rotation.x=
+Math.PI/2.5;
+
+scene.add(torus);
+
+
+/* ANIMATION */
+
+let mouseX=0;
+let mouseY=0;
+
+document.addEventListener(
+    "mousemove",
+    e=>{
+
+        mouseX=
+        (e.clientX/innerWidth-.5);
+
+        mouseY=
+        (e.clientY/innerHeight-.5);
+
+    }
+);
+
+
+function animate(){
+
+    requestAnimationFrame(animate);
+
+    particles.rotation.y+=.0007;
+    particles.rotation.x+=.0002;
+
+    torus.rotation.z+=.002;
+
+    camera.position.x +=
+    (mouseX*.35-camera.position.x)*.03;
+
+    camera.position.y +=
+    (-mouseY*.25-camera.position.y)*.03;
+
+    camera.lookAt(0,0,0);
+
+    renderer.render(
+        scene,
+        camera
+    );
+
+}
+
+animate();
+
+
+/* =========================
+   RESIZE
+========================= */
+
+window.addEventListener(
+    "resize",
+    ()=>{
+
+        camera.aspect=
+        innerWidth/innerHeight;
+
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(
+            innerWidth,
+            innerHeight
+        );
+
+    }
+);
+
+
+/* =========================
+   GSAP REVEALS
+========================= */
+
+gsap.registerPlugin();
+
+
+gsap.from(".hero-content > *",{
+    y:60,
+    opacity:0,
+    duration:1.2,
+    stagger:.15,
+    delay:2,
+    ease:"power4.out"
+});
+
+
+gsap.utils.toArray(
+    ".room,.dining-card,.gallery-item,.feature"
+).forEach(item=>{
+
+    gsap.from(item,{
+
+        scrollTrigger:false,
+
+        y:60,
+        opacity:0,
+        duration:1,
+
+        scrollTrigger:{
+            trigger:item,
+            start:"top 85%"
+        }
+
+    });
+
+});
+
+
+/* =========================
+   BOOKING DEMO
+========================= */
+
+document
+.querySelector(".booking-form")
+.addEventListener("submit",e=>{
+
+    e.preventDefault();
+
+    alert(
+      "Reservation request received!\
+\n\
+      Connect this form to your hotel booking backend."
+    );
+
+});
+
+</script>
+
+</body>
+</html>
